@@ -1,0 +1,182 @@
+[
+  {
+    "id": "anthropology",
+    "title": "Anthropology",
+    "materials": {
+      "modules": [{ "name": "Module 1", "url": "https://bere123tare-cmyk.github.io/yeneta-materials/anthropology/modules/module-1.pdf" }],
+      "ppt": [{ "name": "Chapter 1 Slide", "url": "https://bere123tare-cmyk.github.io/yeneta-materials/anthropology/ppt/chapter-1.pptx" }],
+      "exams": [{ "name": "Mid Exam", "url": "https://bere123tare-cmyk.github.io/yeneta-materials/anthropology/exams/mid-exam.pdf" }],
+      "notes": [{ "name": "Short Note", "url": "https://bere123tare-cmyk.github.io/yeneta-materials/anthropology/notes/summary.pdf" }]
+    }
+  },
+  {
+    "id": "entrepreneurship",
+    "title": "Entrepreneurship",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "general-psychology",
+    "title": "General Psychology",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "global-trends",
+    "title": "Global Trends",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "geography-of-ethiopia",
+    "title": "Geography of Ethiopia",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "history-of-ethiopia",
+    "title": "History of Ethiopia",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "economics",
+    "title": "Economics",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "emerging-technology",
+    "title": "Emerging Technology",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "communicative-english-1",
+    "title": "Communicative English I",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "communicative-english-2",
+    "title": "Communicative English II",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "logic-and-critical-thinking",
+    "title": "Logic & Critical Thinking",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "general-physics",
+    "title": "General Physics",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "inclusiveness",
+    "title": "Inclusiveness",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "civic-and-moral-education",
+    "title": "Civic & Moral Education",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "mathematics",
+    "title": "Mathematics",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "applied-mathematics-1",
+    "title": "Applied Mathematics I",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "maths-for-social",
+    "title": "Maths for Social",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  },
+  {
+    "id": "physical-fitness",
+    "title": "Physical Fitness",
+    "materials": {
+      "modules": [],
+      "ppt": [],
+      "exams": [],
+      "notes": []
+    }
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "anthropology",
+    "title": "Social Anthropology",
+    "description": "Introduction to Social Anthropology Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Anthropology_Module-1.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "applied-maths-1",
+    "title": "Applied Mathematics I",
+    "description": "Applied Mathematics I Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/applied_maths_1_module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "civics",
+    "title": "Moral and Civics Education",
+    "description": "Moral and Civics Education Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Civics_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "communicative-english-1",
+    "title": "Communicative English Language Skills I",
+    "description": "Communicative English Language Skills I Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/English_I_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "communicative-english-2",
+    "title": "Communicative English Language Skills II",
+    "description": "Communicative English Language Skills II Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/communicative-english-2-module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "economics",
+    "title": "Economics",
+    "description": "Introduction to Micro and Macroeconomics",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Economics_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "emerging-technology",
+    "title": "Emerging Technology",
+    "description": "Introduction to Emerging Technologies",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Emerging_Tech_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "entrepreneurship",
+    "title": "Entrepreneurship",
+    "description": "Fundamentals of Entrepreneurship and Business Formation",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Entrepreneurship_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "general-biology",
+    "title": "General Biology",
+    "description": "General Biology Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/general-biology.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "general-physics",
+    "title": "General Physics",
+    "description": "General Physics Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/general-physics.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "global-trends",
+    "title": "Global Trends",
+    "description": "Global Trends Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Global_Trends_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "history-of-ethiopia",
+    "title": "History of Ethiopia and the Horn",
+    "description": "History of Ethiopia and the Horn Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/History_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "inclusiveness",
+    "title": "Inclusiveness",
+    "description": "Inclusiveness and Special Needs Education",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/inclusiveness.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "logic",
+    "title": "Logic and Critical Thinking",
+    "description": "Introduction to Logic and Critical Thinking",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Logic_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "maths-natural",
+    "title": "Mathematics for Natural Sciences",
+    "description": "Mathematics for Natural Sciences Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/mathematics-for-natural.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "maths-social",
+    "title": "Mathematics for Social Sciences",
+    "description": "Mathematics for Social Sciences Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/maths-for-social.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "physical-fitness",
+    "title": "Physical Fitness",
+    "description": "Health and Physical Fitness Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/physical-fitness.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  },
+  {
+    "id": "general-psychology",
+    "title": "General Psychology",
+    "description": "General Psychology Course Module",
+    "url": "https://raw.githubusercontent.com/bere123tare-cmyk/yeneta-materials/main/Psychology_Module.pdf",
+    "powerpoints": "",
+    "short_notes": "",
+    "exams": "",
+    "reference_books": ""
+  }
+]

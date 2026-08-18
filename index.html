@@ -1,0 +1,2991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#07152d">
+<title>YENETA • Study Materials</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    margin:0;
+    min-height:100%;
+    background:#07152d;
+    color:#f5f8ff;
+    font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+button,input{
+    font:inherit;
+}
+
+button{
+    -webkit-tap-highlight-color:transparent;
+}
+
+.hidden{
+    display:none!important;
+}
+
+/* =========================
+   APP
+========================= */
+
+#app{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 10% 0%,rgba(53,116,255,.18),transparent 30%),
+        radial-gradient(circle at 100% 10%,rgba(0,210,170,.10),transparent 28%),
+        #07152d;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+
+    height:64px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:0 16px;
+
+    background:rgba(7,21,45,.94);
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+.back-btn{
+    width:42px;
+    height:42px;
+
+    border:0;
+    border-radius:14px;
+
+    background:rgba(255,255,255,.08);
+    color:white;
+
+    font-size:27px;
+    line-height:1;
+}
+
+.brand{
+    flex:1;
+}
+
+.brand-title{
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:.6px;
+}
+
+.brand-sub{
+    margin-top:2px;
+    color:#8fa2c1;
+    font-size:10px;
+}
+
+.status-dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#24d49a;
+    box-shadow:0 0 12px rgba(36,212,154,.65);
+}
+
+.status-dot.offline{
+    background:#ffb84d;
+    box-shadow:0 0 12px rgba(255,184,77,.55);
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home{
+    padding:22px 16px 45px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.hero{
+    padding:23px;
+
+    border-radius:27px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(47,108,255,.23),
+            rgba(0,200,160,.08)
+        );
+
+    box-shadow:0 18px 50px rgba(0,0,0,.18);
+}
+
+.hero-badge{
+    display:inline-flex;
+
+    padding:7px 11px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#b8c8e3;
+
+    font-size:10px;
+    font-weight:850;
+    letter-spacing:.3px;
+}
+
+.hero h1{
+    margin:14px 0 7px;
+
+    font-size:30px;
+    line-height:1.08;
+}
+
+.hero p{
+    margin:0;
+
+    color:#a5b6d1;
+
+    font-size:13px;
+    line-height:1.55;
+}
+
+.search{
+    width:100%;
+    height:49px;
+
+    margin-top:18px;
+    padding:0 16px;
+
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:16px;
+
+    outline:none;
+
+    color:#fff;
+    background:rgba(255,255,255,.07);
+}
+
+.search::placeholder{
+    color:#7083a3;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section-title{
+    margin:27px 2px 13px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.section-title h2{
+    margin:0;
+    font-size:18px;
+}
+
+.count{
+    color:#7e91af;
+    font-size:11px;
+}
+
+/* =========================
+   COURSES
+========================= */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+.course-card{
+    position:relative;
+
+    min-height:153px;
+
+    padding:17px;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:0 12px 30px rgba(0,0,0,.14);
+
+    transition:transform .16s ease;
+}
+
+.course-card:active{
+    transform:scale(.97);
+}
+
+.course-icon{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:rgba(52,113,255,.15);
+
+    font-size:21px;
+}
+
+.course-number{
+    position:absolute;
+    top:17px;
+    right:15px;
+
+    color:#5f7395;
+
+    font-size:10px;
+    font-weight:850;
+}
+
+.course-title{
+    margin-top:15px;
+
+    font-size:14px;
+    font-weight:850;
+
+    line-height:1.3;
+}
+
+.course-desc{
+    margin-top:6px;
+
+    color:#7f92b0;
+
+    font-size:10.5px;
+    line-height:1.4;
+}
+
+/* =========================
+   COURSE PAGE
+========================= */
+
+.course-page{
+    max-width:900px;
+    margin:auto;
+
+    padding:20px 16px 50px;
+}
+
+.course-header{
+    padding:22px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(48,112,255,.19),
+            rgba(0,200,160,.08)
+        );
+}
+
+.course-kicker{
+    color:#71a4ff;
+
+    font-size:10px;
+    font-weight:850;
+
+    letter-spacing:.9px;
+    text-transform:uppercase;
+}
+
+.course-header h1{
+    margin:9px 0 7px;
+
+    font-size:25px;
+    line-height:1.15;
+}
+
+.course-header p{
+    margin:0;
+
+    color:#90a4c2;
+
+    font-size:12px;
+    line-height:1.5;
+}
+
+.stats{
+    display:flex;
+    gap:10px;
+
+    margin-top:18px;
+}
+
+.stat{
+    flex:1;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.055);
+}
+
+.stat-number{
+    font-size:18px;
+    font-weight:900;
+}
+
+.stat-label{
+    margin-top:3px;
+
+    color:#788ba9;
+
+    font-size:9px;
+}
+
+/* =========================
+   MATERIALS
+========================= */
+
+.materials-title{
+    margin:25px 2px 12px;
+
+    font-size:18px;
+    font-weight:850;
+}
+
+.material-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.material-card{
+    padding:16px;
+
+    border-radius:21px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.045);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.material-top{
+    display:flex;
+    align-items:flex-start;
+    gap:13px;
+}
+
+.material-icon{
+    flex:none;
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:rgba(50,112,255,.14);
+
+    font-size:21px;
+}
+
+.material-info{
+    min-width:0;
+    flex:1;
+}
+
+.material-name{
+    font-size:14px;
+    font-weight:850;
+}
+
+.material-description{
+    margin-top:4px;
+
+    color:#8092af;
+
+    font-size:11px;
+    line-height:1.4;
+}
+
+.material-status{
+    margin-top:8px;
+
+    font-size:11px;
+}
+
+.status-downloaded{
+    color:#3fdda9;
+    font-weight:800;
+}
+
+.status-online{
+    color:#8ea1bd;
+}
+
+.status-unavailable{
+    color:#697b98;
+}
+
+.material-actions{
+    display:flex;
+    gap:8px;
+
+    margin-top:14px;
+}
+
+.action-btn{
+    flex:1;
+
+    min-height:42px;
+
+    padding:0 11px;
+
+    border:0;
+    border-radius:13px;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    font-size:11px;
+    font-weight:850;
+}
+
+.action-btn.primary{
+    background:linear-gradient(
+        135deg,
+        #3474ff,
+        #2356d6
+    );
+}
+
+.action-btn.success{
+    color:#45dfad;
+    background:rgba(31,205,153,.13);
+}
+
+.action-btn.danger{
+    color:#ff8585;
+    background:rgba(255,80,80,.08);
+}
+
+.action-btn:disabled{
+    opacity:.5;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-wrap{
+    margin-top:14px;
+}
+
+.progress-bg{
+    width:100%;
+    height:7px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+}
+
+.progress-bar{
+    width:0;
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #3979ff,
+        #2ed8a3
+    );
+
+    transition:width .12s linear;
+}
+
+.progress-text{
+    display:flex;
+    justify-content:space-between;
+
+    margin-top:7px;
+
+    color:#8295b2;
+
+    font-size:10px;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+    grid-column:1/-1;
+
+    padding:30px 18px;
+
+    text-align:center;
+
+    color:#7486a4;
+}
+
+.empty-icon{
+    font-size:36px;
+    margin-bottom:9px;
+}
+
+.empty-title{
+    color:#b2c1d8;
+    font-weight:800;
+}
+
+.empty-text{
+    margin-top:6px;
+
+    font-size:12px;
+    line-height:1.5;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+#toast{
+    position:fixed;
+
+    left:16px;
+    right:16px;
+    bottom:20px;
+
+    z-index:300;
+
+    padding:14px 16px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:rgba(13,27,51,.97);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    color:white;
+
+    font-size:12px;
+    font-weight:750;
+
+    opacity:0;
+    transform:translateY(120px);
+
+    transition:.25s ease;
+}
+
+#toast.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   PDF VIEWER
+========================= */
+
+#viewerScreen{
+    position:fixed;
+    inset:0;
+
+    z-index:200;
+
+    display:none;
+    flex-direction:column;
+
+    background:#252525;
+}
+
+#viewerScreen.show{
+    display:flex;
+}
+
+.viewer-bar{
+    height:58px;
+
+    flex:none;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:0 10px;
+
+    background:#07152d;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.viewer-close{
+    width:40px;
+    height:40px;
+
+    border:0;
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:24px;
+}
+
+.viewer-title{
+    flex:1;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+    text-overflow:ellipsis;
+
+    font-size:13px;
+    font-weight:850;
+}
+
+#pdfCanvasContainer{
+    flex:1;
+
+    overflow:auto;
+
+    padding:10px;
+
+    background:#252525;
+
+    text-align:center;
+}
+
+.pdf-page{
+    display:block;
+
+    max-width:100%;
+    height:auto;
+
+    margin:0 auto 12px;
+
+    background:white;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.4);
+}
+
+.viewer-message{
+    padding:30px 20px;
+
+    color:#d9e1ee;
+
+    font-size:13px;
+    line-height:1.6;
+}
+
+code{
+    padding:2px 5px;
+    border-radius:4px;
+    background:rgba(255,255,255,.08);
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media(min-width:700px){
+
+    .course-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="app">
+
+<header class="topbar">
+
+    <button
+        id="backButton"
+        class="back-btn hidden">
+        ‹
+    </button>
+
+    <div class="brand">
+
+        <div class="brand-title">
+            YENETA
+        </div>
+
+        <div
+            id="brandSub"
+            class="brand-sub">
+            Freshman Study Materials
+        </div>
+
+    </div>
+
+    <div
+        id="statusDot"
+        class="status-dot">
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<main
+    id="homePage"
+    class="home">
+
+    <section class="hero">
+
+        <span class="hero-badge">
+            🎓 STUDY SMART • STUDY OFFLINE
+        </span>
+
+        <h1>
+            Welcome to YENETA
+        </h1>
+
+        <p>
+            Download your study materials once
+            and continue studying without internet.
+        </p>
+
+        <input
+            id="searchInput"
+            class="search"
+            type="search"
+            placeholder="🔎 Search courses..."
+            autocomplete="off">
+
+    </section>
+
+
+    <div class="section-title">
+
+        <h2>
+            📚 Your Courses
+        </h2>
+
+        <span
+            id="courseCount"
+            class="count">
+        </span>
+
+    </div>
+
+
+    <div
+        id="courseGrid"
+        class="course-grid">
+    </div>
+
+</main>
+
+
+<!-- =========================
+     COURSE PAGE
+========================= -->
+
+<main
+    id="coursePage"
+    class="course-page hidden">
+
+    <section class="course-header">
+
+        <div class="course-kicker">
+            YENETA • STUDY MATERIALS
+        </div>
+
+        <h1 id="courseTitle"></h1>
+
+        <p id="courseDescription"></p>
+
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <div
+                    id="downloadedCount"
+                    class="stat-number">
+                    0
+                </div>
+
+                <div class="stat-label">
+                    Downloaded
+                </div>
+
+            </div>
+
+
+            <div class="stat">
+
+                <div
+                    id="totalMaterials"
+                    class="stat-number">
+                    0
+                </div>
+
+                <div class="stat-label">
+                    Available
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="materials-title">
+        📚 Course Materials
+    </div>
+
+
+    <div
+        id="materialList"
+        class="material-list">
+    </div>
+
+</main>
+
+</div>
+
+
+<!-- =========================
+     PDF VIEWER
+========================= -->
+
+<div id="viewerScreen">
+
+    <div class="viewer-bar">
+
+        <button
+            id="viewerClose"
+            class="viewer-close">
+            ‹
+        </button>
+
+        <div
+            id="viewerTitle"
+            class="viewer-title">
+            Offline Material
+        </div>
+
+    </div>
+
+
+    <div id="pdfCanvasContainer">
+    </div>
+
+</div>
+
+
+<div id="toast"></div>
+
+
+<script type="module">
+
+/* =========================================================
+   YENETA CONFIGURATION
+   ========================================================= */
+
+/*
+    IMPORTANT:
+
+    Your actual repository contains:
+
+        index.html
+        courses.json
+        pdf.mjs
+        pdf.worker.mjs
+
+    Therefore these paths are intentional.
+*/
+
+const COURSE_JSON = "./courses.json";
+
+const PDFJS_FILE = "./pdf.mjs";
+
+const PDFJS_WORKER = "./pdf.worker.mjs";
+
+
+/* =========================================================
+   INDEXEDDB CONFIG
+   ========================================================= */
+
+const DB_NAME =
+    "YENETA_OFFLINE_DATABASE";
+
+const DB_VERSION = 1;
+
+const STORE_NAME =
+    "materials";
+
+
+/* =========================================================
+   STATE
+   ========================================================= */
+
+let courses = [];
+
+let currentCourse = null;
+
+let pdfjsLib = null;
+
+const activeDownloads =
+    new Map();
+
+
+/* =========================================================
+   DOM
+   ========================================================= */
+
+const homePage =
+    document.getElementById(
+        "homePage"
+    );
+
+const coursePage =
+    document.getElementById(
+        "coursePage"
+    );
+
+const courseGrid =
+    document.getElementById(
+        "courseGrid"
+    );
+
+const courseCount =
+    document.getElementById(
+        "courseCount"
+    );
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+const backButton =
+    document.getElementById(
+        "backButton"
+    );
+
+const courseTitle =
+    document.getElementById(
+        "courseTitle"
+    );
+
+const courseDescription =
+    document.getElementById(
+        "courseDescription"
+    );
+
+const materialList =
+    document.getElementById(
+        "materialList"
+    );
+
+const downloadedCount =
+    document.getElementById(
+        "downloadedCount"
+    );
+
+const totalMaterials =
+    document.getElementById(
+        "totalMaterials"
+    );
+
+const statusDot =
+    document.getElementById(
+        "statusDot"
+    );
+
+const brandSub =
+    document.getElementById(
+        "brandSub"
+    );
+
+const toast =
+    document.getElementById(
+        "toast"
+    );
+
+const viewerScreen =
+    document.getElementById(
+        "viewerScreen"
+    );
+
+const viewerClose =
+    document.getElementById(
+        "viewerClose"
+    );
+
+const viewerTitle =
+    document.getElementById(
+        "viewerTitle"
+    );
+
+const pdfCanvasContainer =
+    document.getElementById(
+        "pdfCanvasContainer"
+    );
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+let toastTimer = null;
+
+function showToast(message){
+
+    clearTimeout(toastTimer);
+
+    toast.textContent =
+        message;
+
+    toast.classList.add(
+        "show"
+    );
+
+    toastTimer =
+        setTimeout(
+            ()=>{
+                toast.classList.remove(
+                    "show"
+                );
+            },
+            3200
+        );
+}
+
+
+/* =========================================================
+   NETWORK STATUS
+   ========================================================= */
+
+function updateNetworkStatus(){
+
+    if(navigator.onLine){
+
+        statusDot.classList.remove(
+            "offline"
+        );
+
+        brandSub.textContent =
+            "Freshman Study Materials";
+
+    }else{
+
+        statusDot.classList.add(
+            "offline"
+        );
+
+        brandSub.textContent =
+            "📴 Offline • Your downloads are available";
+    }
+}
+
+window.addEventListener(
+    "online",
+    updateNetworkStatus
+);
+
+window.addEventListener(
+    "offline",
+    updateNetworkStatus
+);
+
+
+/* =========================================================
+   INDEXEDDB
+   ========================================================= */
+
+function openDatabase(){
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            const request =
+                indexedDB.open(
+                    DB_NAME,
+                    DB_VERSION
+                );
+
+
+            request.onupgradeneeded =
+                event => {
+
+                    const db =
+                        event.target.result;
+
+
+                    if(
+                        !db.objectStoreNames
+                            .contains(
+                                STORE_NAME
+                            )
+                    ){
+
+                        const store =
+                            db.createObjectStore(
+                                STORE_NAME,
+                                {
+                                    keyPath:"id"
+                                }
+                            );
+
+
+                        store.createIndex(
+                            "courseId",
+                            "courseId",
+                            {
+                                unique:false
+                            }
+                        );
+
+
+                        store.createIndex(
+                            "type",
+                            "type",
+                            {
+                                unique:false
+                            }
+                        );
+                    }
+                };
+
+
+            request.onsuccess =
+                ()=>{
+                    resolve(
+                        request.result
+                    );
+                };
+
+
+            request.onerror =
+                ()=>{
+                    reject(
+                        request.error
+                    );
+                };
+        }
+    );
+}
+
+
+/* =========================================================
+   SAVE
+========================= */
+
+async function saveMaterial(
+    material
+){
+
+    const db =
+        await openDatabase();
+
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            const tx =
+                db.transaction(
+                    STORE_NAME,
+                    "readwrite"
+                );
+
+
+            tx.objectStore(
+                STORE_NAME
+            ).put(
+                material
+            );
+
+
+            tx.oncomplete =
+                ()=>{
+                    db.close();
+                    resolve();
+                };
+
+
+            tx.onerror =
+                ()=>{
+                    db.close();
+                    reject(
+                        tx.error
+                    );
+                };
+        }
+    );
+}
+
+
+/* =========================================================
+   GET
+========================= */
+
+async function getMaterial(
+    id
+){
+
+    const db =
+        await openDatabase();
+
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            const tx =
+                db.transaction(
+                    STORE_NAME,
+                    "readonly"
+                );
+
+
+            const request =
+                tx.objectStore(
+                    STORE_NAME
+                ).get(id);
+
+
+            request.onsuccess =
+                ()=>{
+                    db.close();
+
+                    resolve(
+                        request.result ||
+                        null
+                    );
+                };
+
+
+            request.onerror =
+                ()=>{
+                    db.close();
+
+                    reject(
+                        request.error
+                    );
+                };
+        }
+    );
+}
+
+
+/* =========================================================
+   DELETE
+========================= */
+
+async function deleteMaterial(
+    id
+){
+
+    const db =
+        await openDatabase();
+
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            const tx =
+                db.transaction(
+                    STORE_NAME,
+                    "readwrite"
+                );
+
+
+            tx.objectStore(
+                STORE_NAME
+            ).delete(id);
+
+
+            tx.oncomplete =
+                ()=>{
+                    db.close();
+                    resolve();
+                };
+
+
+            tx.onerror =
+                ()=>{
+                    db.close();
+
+                    reject(
+                        tx.error
+                    );
+                };
+        }
+    );
+}
+
+
+/* =========================================================
+   LOAD COURSES.JSON
+========================= */
+
+async function loadCourses(){
+
+    try{
+
+        const response =
+            await fetch(
+                COURSE_JSON,
+                {
+                    cache:"no-store"
+                }
+            );
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "courses.json returned HTTP " +
+                response.status
+            );
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if(!Array.isArray(data)){
+
+            throw new Error(
+                "courses.json must contain an array"
+            );
+        }
+
+
+        courses =
+            data;
+
+
+        renderCourses(
+            courses
+        );
+
+
+    }catch(error){
+
+        console.error(
+            "YENETA course loading error:",
+            error
+        );
+
+
+        courseGrid.innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    ⚠️
+                </div>
+
+                <div class="empty-title">
+                    Could not load courses
+                </div>
+
+                <div class="empty-text">
+                    ${escapeHTML(
+                        error.message
+                    )}
+                    <br><br>
+                    Make sure
+                    <strong>
+                        courses.json
+                    </strong>
+                    is in the same folder as
+                    <strong>
+                        index.html
+                    </strong>.
+                </div>
+
+            </div>
+        `;
+    }
+}
+
+
+/* =========================================================
+   COURSE ICONS
+========================= */
+
+const courseIcons = [
+    "🌍",
+    "📐",
+    "⚖️",
+    "🇬🇧",
+    "🗣️",
+    "💰",
+    "🤖",
+    "🚀",
+    "🧬",
+    "⚛️",
+    "🌎",
+    "📜",
+    "♿",
+    "🧠",
+    "📊",
+    "➗",
+    "🏃",
+    "🧠"
+];
+
+
+/* =========================================================
+   RENDER COURSES
+========================= */
+
+function renderCourses(
+    list
+){
+
+    courseGrid.innerHTML =
+        "";
+
+
+    courseCount.textContent =
+        `${list.length} courses`;
+
+
+    if(!list.length){
+
+        courseGrid.innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    🔎
+                </div>
+
+                <div class="empty-title">
+                    No courses found
+                </div>
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    list.forEach(
+        (course,index)=>{
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "course-card";
+
+
+            card.innerHTML = `
+
+                <div class="course-icon">
+                    ${
+                        courseIcons[
+                            index %
+                            courseIcons.length
+                        ]
+                    }
+                </div>
+
+                <div class="course-number">
+                    ${
+                        String(
+                            index + 1
+                        ).padStart(
+                            2,
+                            "0"
+                        )
+                    }
+                </div>
+
+                <div class="course-title">
+                    ${escapeHTML(
+                        course.title ||
+                        "Course"
+                    )}
+                </div>
+
+                <div class="course-desc">
+                    ${escapeHTML(
+                        course.description ||
+                        ""
+                    )}
+                </div>
+            `;
+
+
+            card.addEventListener(
+                "click",
+                ()=>{
+                    openCourse(
+                        course
+                    );
+                }
+            );
+
+
+            courseGrid.appendChild(
+                card
+            );
+        }
+    );
+}
+
+
+/* =========================================================
+   SEARCH
+========================= */
+
+searchInput.addEventListener(
+    "input",
+    ()=>{
+
+        const query =
+            searchInput.value
+                .trim()
+                .toLowerCase();
+
+
+        if(!query){
+
+            renderCourses(
+                courses
+            );
+
+            return;
+        }
+
+
+        const filtered =
+            courses.filter(
+                course => {
+
+                    const text =
+                        (
+                            course.title ||
+                            ""
+                        ) +
+                        " " +
+                        (
+                            course.description ||
+                            ""
+                        );
+
+
+                    return text
+                        .toLowerCase()
+                        .includes(
+                            query
+                        );
+                }
+            );
+
+
+        renderCourses(
+            filtered
+        );
+    }
+);
+
+
+/* =========================================================
+   MATERIAL TYPES
+========================= */
+
+const MATERIAL_TYPES = [
+
+    {
+        key:"url",
+        name:"Course Module",
+        icon:"📘",
+        description:
+            "Official course module"
+    },
+
+    {
+        key:"powerpoints",
+        name:"PowerPoints",
+        icon:"📊",
+        description:
+            "Lecture presentations"
+    },
+
+    {
+        key:"short_notes",
+        name:"Short Notes",
+        icon:"📝",
+        description:
+            "Condensed study notes"
+    },
+
+    {
+        key:"exams",
+        name:"Last Exams",
+        icon:"📄",
+        description:
+            "Previous examination materials"
+    },
+
+    {
+        key:"reference_books",
+        name:"Reference Books",
+        icon:"📚",
+        description:
+            "Additional reference books"
+    }
+];
+
+
+/* =========================================================
+   OPEN COURSE
+========================= */
+
+async function openCourse(
+    course
+){
+
+    currentCourse =
+        course;
+
+
+    homePage.classList.add(
+        "hidden"
+    );
+
+    coursePage.classList.remove(
+        "hidden"
+    );
+
+    backButton.classList.remove(
+        "hidden"
+    );
+
+
+    courseTitle.textContent =
+        course.title ||
+        "Course";
+
+
+    courseDescription.textContent =
+        course.description ||
+        "";
+
+
+    await renderMaterials(
+        course
+    );
+
+
+    window.scrollTo(
+        0,
+        0
+    );
+}
+
+
+/* =========================================================
+   BACK
+========================= */
+
+backButton.addEventListener(
+    "click",
+    ()=>{
+
+        coursePage.classList.add(
+            "hidden"
+        );
+
+        homePage.classList.remove(
+            "hidden"
+        );
+
+        backButton.classList.add(
+            "hidden"
+        );
+
+        currentCourse =
+            null;
+
+
+        window.scrollTo(
+            0,
+            0
+        );
+    }
+);
+
+
+/* =========================================================
+   MATERIAL ID
+========================= */
+
+function materialId(
+    courseId,
+    type
+){
+
+    return (
+        "yeneta:" +
+        String(courseId) +
+        ":" +
+        String(type)
+    );
+}
+
+
+/* =========================================================
+   RENDER MATERIALS
+========================= */
+
+async function renderMaterials(
+    course
+){
+
+    materialList.innerHTML =
+        "";
+
+
+    let available =
+        0;
+
+    let downloaded =
+        0;
+
+
+    for(
+        const type
+        of MATERIAL_TYPES
+    ){
+
+        const url =
+            course[type.key];
+
+
+        const hasURL =
+            typeof url === "string" &&
+            url.trim() !== "";
+
+
+        if(hasURL){
+
+            available++;
+        }
+
+
+        let stored =
+            null;
+
+
+        if(hasURL){
+
+            stored =
+                await getMaterial(
+                    materialId(
+                        course.id,
+                        type.key
+                    )
+                );
+
+
+            if(stored){
+
+                downloaded++;
+            }
+        }
+
+
+        materialList.appendChild(
+            createMaterialCard(
+                course,
+                type,
+                url,
+                stored
+            )
+        );
+    }
+
+
+    downloadedCount.textContent =
+        downloaded;
+
+
+    totalMaterials.textContent =
+        available;
+}
+
+
+/* =========================================================
+   CREATE MATERIAL CARD
+========================= */
+
+function createMaterialCard(
+    course,
+    type,
+    url,
+    stored
+){
+
+    const card =
+        document.createElement(
+            "article"
+        );
+
+
+    card.className =
+        "material-card";
+
+
+    const available =
+        typeof url === "string" &&
+        url.trim() !== "";
+
+
+    let status;
+
+
+    if(stored){
+
+        status = `
+            <div class="material-status status-downloaded">
+                ✓ Available Offline
+            </div>
+        `;
+
+    }else if(available){
+
+        status = `
+            <div class="material-status status-online">
+                🌐 Available for download
+            </div>
+        `;
+
+    }else{
+
+        status = `
+            <div class="material-status status-unavailable">
+                🔒 Not uploaded yet
+            </div>
+        `;
+    }
+
+
+    card.innerHTML = `
+
+        <div class="material-top">
+
+            <div class="material-icon">
+                ${type.icon}
+            </div>
+
+            <div class="material-info">
+
+                <div class="material-name">
+                    ${type.name}
+                </div>
+
+                <div class="material-description">
+                    ${type.description}
+                </div>
+
+                ${status}
+
+            </div>
+
+        </div>
+
+
+        <div class="progress-wrap hidden">
+
+            <div class="progress-bg">
+
+                <div class="progress-bar">
+                </div>
+
+            </div>
+
+            <div class="progress-text">
+
+                <span class="progress-percent">
+                    0%
+                </span>
+
+                <span class="progress-size">
+                    Preparing...
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="material-actions">
+        </div>
+    `;
+
+
+    const actions =
+        card.querySelector(
+            ".material-actions"
+        );
+
+
+    const progressWrap =
+        card.querySelector(
+            ".progress-wrap"
+        );
+
+
+    const progressBar =
+        card.querySelector(
+            ".progress-bar"
+        );
+
+
+    const progressPercent =
+        card.querySelector(
+            ".progress-percent"
+        );
+
+
+    const progressSize =
+        card.querySelector(
+            ".progress-size"
+        );
+
+
+    /* =========================
+       NOT AVAILABLE
+    ========================= */
+
+    if(!available){
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.className =
+            "action-btn";
+
+
+        button.disabled =
+            true;
+
+
+        button.textContent =
+            "🔒 Coming Soon";
+
+
+        actions.appendChild(
+            button
+        );
+
+
+        return card;
+    }
+
+
+    /* =========================
+       ALREADY DOWNLOADED
+    ========================= */
+
+    if(stored){
+
+        const openButton =
+            document.createElement(
+                "button"
+            );
+
+
+        openButton.className =
+            "action-btn success";
+
+
+        openButton.textContent =
+            "📖 Open Offline";
+
+
+        openButton.onclick =
+            ()=>{
+                openStoredMaterial(
+                    stored
+                );
+            };
+
+
+        const deleteButton =
+            document.createElement(
+                "button"
+            );
+
+
+        deleteButton.className =
+            "action-btn danger";
+
+
+        deleteButton.textContent =
+            "🗑 Delete";
+
+
+        deleteButton.onclick =
+            async ()=>{
+
+                const confirmed =
+                    confirm(
+                        "Delete this material from YENETA offline storage?"
+                    );
+
+
+                if(!confirmed){
+
+                    return;
+                }
+
+
+                await deleteMaterial(
+                    materialId(
+                        course.id,
+                        type.key
+                    )
+                );
+
+
+                showToast(
+                    "Material removed from offline storage."
+                );
+
+
+                await renderMaterials(
+                    currentCourse
+                );
+            };
+
+
+        actions.appendChild(
+            openButton
+        );
+
+
+        actions.appendChild(
+            deleteButton
+        );
+
+
+        return card;
+    }
+
+
+    /* =========================
+       DOWNLOAD
+    ========================= */
+
+    const downloadButton =
+        document.createElement(
+            "button"
+        );
+
+
+    downloadButton.className =
+        "action-btn primary";
+
+
+    downloadButton.textContent =
+        "📥 Download Material";
+
+
+    downloadButton.onclick =
+        ()=>{
+            downloadMaterial(
+                course,
+                type,
+                url,
+                downloadButton,
+                progressWrap,
+                progressBar,
+                progressPercent,
+                progressSize
+            );
+        };
+
+
+    actions.appendChild(
+        downloadButton
+    );
+
+
+    return card;
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================= */
+
+async function downloadMaterial(
+    course,
+    type,
+    url,
+    button,
+    progressWrap,
+    progressBar,
+    progressPercent,
+    progressSize
+){
+
+    if(!navigator.onLine){
+
+        showToast(
+            "📴 Connect to the internet to download."
+        );
+
+        return;
+    }
+
+
+    const id =
+        materialId(
+            course.id,
+            type.key
+        );
+
+
+    if(
+        activeDownloads.has(
+            id
+        )
+    ){
+
+        return;
+    }
+
+
+    const controller =
+        new AbortController();
+
+
+    activeDownloads.set(
+        id,
+        controller
+    );
+
+
+    button.disabled =
+        true;
+
+
+    button.textContent =
+        "⏳ Downloading...";
+
+
+    progressWrap.classList.remove(
+        "hidden"
+    );
+
+
+    try{
+
+        /*
+            Fetch the PDF as binary data.
+
+            We NEVER convert it to Base64.
+        */
+
+        const response =
+            await fetch(
+                url,
+                {
+                    method:"GET",
+                    cache:"no-store",
+                    signal:
+                        controller.signal
+                }
+            );
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "HTTP " +
+                response.status
+            );
+        }
+
+
+        const total =
+            Number(
+                response.headers.get(
+                    "Content-Length"
+                ) || 0
+            );
+
+
+        const reader =
+            response.body &&
+            response.body.getReader
+                ? response.body.getReader()
+                : null;
+
+
+        const chunks = [];
+
+        let received =
+            0;
+
+
+        if(reader){
+
+            while(true){
+
+                const result =
+                    await reader.read();
+
+
+                if(result.done){
+
+                    break;
+                }
+
+
+                chunks.push(
+                    result.value
+                );
+
+
+                received +=
+                    result.value.byteLength;
+
+
+                if(total > 0){
+
+                    const percent =
+                        Math.round(
+                            received /
+                            total *
+                            100
+                        );
+
+
+                    progressBar.style.width =
+                        percent + "%";
+
+
+                    progressPercent.textContent =
+                        percent + "%";
+
+
+                    progressSize.textContent =
+                        formatBytes(
+                            received
+                        ) +
+                        " / " +
+                        formatBytes(
+                            total
+                        );
+
+                }else{
+
+                    progressPercent.textContent =
+                        formatBytes(
+                            received
+                        );
+
+                    progressSize.textContent =
+                        "Downloading...";
+                }
+            }
+
+        }else{
+
+            const buffer =
+                await response.arrayBuffer();
+
+
+            chunks.push(
+                new Uint8Array(
+                    buffer
+                )
+            );
+
+
+            received =
+                buffer.byteLength;
+
+
+            progressBar.style.width =
+                "100%";
+
+
+            progressPercent.textContent =
+                "100%";
+        }
+
+
+        /*
+            Combine binary chunks.
+
+            Still NO BASE64.
+        */
+
+        const buffer =
+            combineChunks(
+                chunks,
+                received
+            );
+
+
+        const blob =
+            new Blob(
+                [buffer],
+                {
+                    type:"application/pdf"
+                }
+            );
+
+
+        /*
+            THE IMPORTANT PART:
+
+            Save the actual PDF Blob
+            directly inside IndexedDB.
+        */
+
+        await saveMaterial({
+
+            id:id,
+
+            courseId:
+                String(course.id),
+
+            courseTitle:
+                course.title || "",
+
+            type:
+                type.key,
+
+            title:
+                type.name,
+
+            url:url,
+
+            blob:blob,
+
+            size:
+                blob.size,
+
+            downloadedAt:
+                Date.now()
+        });
+
+
+        progressBar.style.width =
+            "100%";
+
+
+        progressPercent.textContent =
+            "100%";
+
+
+        progressSize.textContent =
+            formatBytes(
+                blob.size
+            );
+
+
+        showToast(
+            "✓ Download complete. You can now study offline."
+        );
+
+
+        await renderMaterials(
+            currentCourse
+        );
+
+
+    }catch(error){
+
+        console.error(
+            "YENETA download error:",
+            error
+        );
+
+
+        if(
+            error.name ===
+            "AbortError"
+        ){
+
+            showToast(
+                "Download cancelled."
+            );
+
+        }else{
+
+            showToast(
+                "Download failed: " +
+                error.message
+            );
+        }
+
+
+        button.disabled =
+            false;
+
+
+        button.textContent =
+            "📥 Download Material";
+
+
+        progressWrap.classList.add(
+            "hidden"
+        );
+
+
+    }finally{
+
+        activeDownloads.delete(
+            id
+        );
+    }
+}
+
+
+/* =========================================================
+   COMBINE CHUNKS
+========================= */
+
+function combineChunks(
+    chunks,
+    totalLength
+){
+
+    const result =
+        new Uint8Array(
+            totalLength
+        );
+
+
+    let offset =
+        0;
+
+
+    for(
+        const chunk
+        of chunks
+    ){
+
+        result.set(
+            chunk,
+            offset
+        );
+
+
+        offset +=
+            chunk.byteLength;
+    }
+
+
+    return result.buffer;
+}
+
+
+/* =========================================================
+   LOAD PDF.JS
+========================= */
+
+async function loadPDFJS(){
+
+    if(pdfjsLib){
+
+        return pdfjsLib;
+    }
+
+
+    try{
+
+        /*
+            Your repository currently contains:
+
+                pdf.mjs
+                pdf.worker.mjs
+
+            in the root.
+        */
+
+        pdfjsLib =
+            await import(
+                PDFJS_FILE
+            );
+
+
+        pdfjsLib
+            .GlobalWorkerOptions
+            .workerSrc =
+            new URL(
+                PDFJS_WORKER,
+                location.href
+            ).href;
+
+
+        return pdfjsLib;
+
+
+    }catch(error){
+
+        console.error(
+            "Could not load local PDF.js:",
+            error
+        );
+
+
+        throw new Error(
+            "Local PDF.js could not be loaded. " +
+            "Make sure pdf.mjs and pdf.worker.mjs " +
+            "are in the repository root."
+        );
+    }
+}
+
+
+/* =========================================================
+   OPEN OFFLINE PDF
+========================= */
+
+async function openStoredMaterial(
+    stored
+){
+
+    if(
+        !stored ||
+        !stored.blob
+    ){
+
+        showToast(
+            "⚠️ Offline file is missing."
+        );
+
+        return;
+    }
+
+
+    /*
+        Object URL points to the
+        IndexedDB Blob.
+
+        It does NOT download the PDF
+        to Android storage.
+    */
+
+    const objectURL =
+        URL.createObjectURL(
+            stored.blob
+        );
+
+
+    try{
+
+        await openPDF(
+            objectURL,
+            stored.title
+        );
+
+
+    }catch(error){
+
+        console.error(
+            error
+        );
+
+
+        /*
+            Native browser fallback.
+        */
+
+        viewerTitle.textContent =
+            stored.title ||
+            "Offline Material";
+
+
+        viewerScreen.classList.add(
+            "show"
+        );
+
+
+        pdfCanvasContainer.innerHTML = `
+
+            <iframe
+                src="${objectURL}"
+                style="
+                    width:100%;
+                    height:100%;
+                    min-height:80vh;
+                    border:0;
+                    background:white;
+                ">
+            </iframe>
+        `;
+    }
+}
+
+
+/* =========================================================
+   OPEN PDF.JS
+========================= */
+
+async function openPDF(
+    objectURL,
+    title
+){
+
+    viewerTitle.textContent =
+        title ||
+        "Offline Material";
+
+
+    viewerScreen.classList.add(
+        "show"
+    );
+
+
+    pdfCanvasContainer.innerHTML = `
+
+        <div class="viewer-message">
+            📖 Opening offline material...
+        </div>
+    `;
+
+
+    const pdfjs =
+        await loadPDFJS();
+
+
+    const loadingTask =
+        pdfjs.getDocument({
+            url:objectURL
+        });
+
+
+    const pdf =
+        await loadingTask.promise;
+
+
+    pdfCanvasContainer.innerHTML =
+        "";
+
+
+    for(
+        let number = 1;
+        number <= pdf.numPages;
+        number++
+    ){
+
+        const page =
+            await pdf.getPage(
+                number
+            );
+
+
+        const containerWidth =
+            Math.max(
+                280,
+                pdfCanvasContainer
+                    .clientWidth -
+                20
+            );
+
+
+        const baseViewport =
+            page.getViewport({
+                scale:1
+            });
+
+
+        const scale =
+            Math.min(
+                containerWidth /
+                baseViewport.width,
+                2.2
+            );
+
+
+        const viewport =
+            page.getViewport({
+                scale:scale
+            });
+
+
+        const canvas =
+            document.createElement(
+                "canvas"
+            );
+
+
+        canvas.className =
+            "pdf-page";
+
+
+        const context =
+            canvas.getContext(
+                "2d",
+                {
+                    alpha:false
+                }
+            );
+
+
+        const pixelRatio =
+            Math.min(
+                window.devicePixelRatio ||
+                1,
+                2
+            );
+
+
+        canvas.width =
+            Math.floor(
+                viewport.width *
+                pixelRatio
+            );
+
+
+        canvas.height =
+            Math.floor(
+                viewport.height *
+                pixelRatio
+            );
+
+
+        canvas.style.width =
+            viewport.width +
+            "px";
+
+
+        canvas.style.height =
+            viewport.height +
+            "px";
+
+
+        pdfCanvasContainer.appendChild(
+            canvas
+        );
+
+
+        await page.render({
+
+            canvasContext:
+                context,
+
+            viewport:
+                viewport,
+
+            transform:[
+                pixelRatio,
+                0,
+                0,
+                pixelRatio,
+                0,
+                0
+            ]
+
+        }).promise;
+    }
+}
+
+
+/* =========================================================
+   CLOSE VIEWER
+========================= */
+
+viewerClose.addEventListener(
+    "click",
+    ()=>{
+
+        viewerScreen.classList.remove(
+            "show"
+        );
+
+
+        pdfCanvasContainer.innerHTML =
+            "";
+    }
+);
+
+
+/* =========================================================
+   HELPERS
+========================= */
+
+function formatBytes(
+    bytes
+){
+
+    if(
+        !Number.isFinite(bytes) ||
+        bytes <= 0
+    ){
+
+        return "0 B";
+    }
+
+
+    const units = [
+        "B",
+        "KB",
+        "MB",
+        "GB"
+    ];
+
+
+    const index =
+        Math.floor(
+            Math.log(bytes) /
+            Math.log(1024)
+        );
+
+
+    return (
+        (
+            bytes /
+            Math.pow(
+                1024,
+                index
+            )
+        ).toFixed(
+            index === 0 ? 0 : 1
+        ) +
+        " " +
+        units[index]
+    );
+}
+
+
+function escapeHTML(
+    value
+){
+
+    return String(
+        value
+    )
+    .replaceAll(
+        "&",
+        "&amp;"
+    )
+    .replaceAll(
+        "<",
+        "&lt;"
+    )
+    .replaceAll(
+        ">",
+        "&gt;"
+    )
+    .replaceAll(
+        '"',
+        "&quot;"
+    )
+    .replaceAll(
+        "'",
+        "&#039;"
+    );
+}
+
+
+/* =========================================================
+   START
+========================= */
+
+async function start(){
+
+    updateNetworkStatus();
+
+
+    try{
+
+        await openDatabase();
+
+    }catch(error){
+
+        console.error(
+            "IndexedDB error:",
+            error
+        );
+
+
+        showToast(
+            "⚠️ IndexedDB offline storage is unavailable."
+        );
+    }
+
+
+    await loadCourses();
+}
+
+
+start();
+
+</script>
+
+</body>
+</html>
